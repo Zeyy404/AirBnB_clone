@@ -3,6 +3,8 @@
 import unittest
 import models
 import datetime
+from io import StringIO
+import sys
 from models.base_model import BaseModel
 
 
@@ -47,6 +49,21 @@ class TestBaseModel(unittest.TestCase):
         old_updated_at = self.my_model.updated_at
         self.my_model.save()
         self.assertNotEqual(self.my_model.updated_at, old_updated_at)
+
+    def test_str_overide(self):
+        """Testing that the right message gets printed."""
+
+        backup = sys.stdout
+        inst_id = self.my_model.id
+        capture_out = StringIO()
+        sys.stdout = capture_out
+        print(self.my_model)
+
+        cap = capture_out.getvalue().split(" ")
+        self.assertEqual(cap[0], "[BaseModel]")
+
+        self.assertEqual(cap[1], "({})".format(inst_id))
+        sys.stdout = backup
 
     def test_to_dict_type(self):
         """Testing the type of instance of the to_dict method"""
