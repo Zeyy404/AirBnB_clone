@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ Test suite for the console"""
 
+import unittest
 import os
 import sys
-import unittest
 import models
 from models import storage
 from models.engine.file_storage import FileStorage
