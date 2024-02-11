@@ -147,7 +147,7 @@ class HBNBCommand(cmd.Cmd):
         if key not in storage.all():
             print("** no instance found **")
             return
-        instance = storage.all().get(key)
+        instance = storage.all()[key]
 
         if len(arg) < 3:
             print("** attribute name missing **")
