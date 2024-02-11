@@ -25,7 +25,7 @@ class HBNBCommand(cmd.Cmd):
                 instance = storage.class_()[args]()
                 instance.save()
                 print(f"{instance.id}")
-            except AttributeError:
+            except KeyError:
                 print(f"** class doesn't exist **")
 
     def do_show(self, args):
