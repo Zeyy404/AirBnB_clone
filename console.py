@@ -160,16 +160,18 @@ class HBNBCommand(cmd.Cmd):
             return
 
         attr_value = arg[3]
-        try:
-            if isinstance(getattr(instance, attr_name), int):
-                attr_value = int(attr_value)
-            if isinstance(getattr(instance, attr_name), float):
-                attr_value = float(attr_value)
-            if isinstance(getattr(instance, attr_name), str):
-                attr_value = str(attr_value)
-        except ValueError:
-            pass
-        setattr(storage.all()[key], attr_name, attr_value)
+        if hasattr(instance, attr_name):
+            try:
+                if isinstance(getattr(instance, attr_name), int):
+                    attr_value = int(attr_value)
+                    if isinstance(getattr(instance, attr_name), float):
+                        attr_value = float(attr_value)
+            except ValueError:
+                pass
+            setattr(storage.all()[key], attr_name, attr_value)
+        else:
+            setattr(storage.all()[key], attr_name, attr_value)
+
         storage.all()[key].save()
 
     def do_quit(self, args):
