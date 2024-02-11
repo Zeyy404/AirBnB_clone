@@ -52,3 +52,7 @@ class TestBaseModel(unittest.TestCase):
         """Testing the type of instance of the to_dict method"""
 
         self.assertTrue("<class 'dict'>", type(self.my_model.to_dict))
+
+
+if __name__ == "__main__":
+    unittest.main()

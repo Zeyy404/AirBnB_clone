@@ -72,3 +72,7 @@ class TestFileStorage(unittest.TestCase):
 
         self.storage.save()
         self.assertTrue(os.path.isfile("file.json"))
+
+
+if __name__ == "__main__":
+    unittest.main()
