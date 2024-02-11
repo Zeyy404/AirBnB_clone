@@ -26,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
                 instance.save()
                 print(f"{instance.id}")
             except KeyError:
-                print(f"** class doesn't exist **")
+                print("** class doesn't exist **")
 
     def do_show(self, args):
         """ Prints the string representation of an instance
