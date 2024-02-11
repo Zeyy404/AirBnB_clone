@@ -76,15 +76,16 @@ class HBNBCommand(cmd.Cmd):
             based or not on the class name.
         """
         arg = args.split()
-        if arg and arg[0] not in storage.class_():
-            print("** class doesn't exist **")
-            return
-
         if arg:
             class_name = arg[0]
-            instances = [str(obj) for key, obj in storage.all().items()
-                         if key.startswith(f"{class_name}.")]
-            print(instances)
+            if class_name not in storage.class_():
+                print("** class doesn't exist **")
+                return
+
+            instances = storage.all().values()
+            obj_list = [str(obj) for obj in instances
+                        if isinstance(obj, storage.class_()[class_name])]
+            print(obj_list)
         else:
             instances = [str(obj) for key, obj in storage.all().items()]
             print(instances)
