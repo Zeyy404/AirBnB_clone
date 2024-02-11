@@ -37,9 +37,9 @@ class TestHBNBCommand(unittest.TestCase):
         self.assertTrue(console.onecmd("quit"))
 
     def test_EOF(self):
-       """Test EOF exists"""
+        """Test EOF exists"""
 
-       console = self.create()
+        console = self.create()
         self.assertTrue(console.onecmd("EOF"))
 
     def test_all(self):
