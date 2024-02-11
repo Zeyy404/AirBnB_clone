@@ -131,7 +131,7 @@ class HBNBCommand(cmd.Cmd):
                 attr_value = int(attr_value)
             if isinstance(getattr(instance, attr_name), float):
                 attr_value = float(attr_value)
-        except ValueError:
+        except TypeError:
             pass
         setattr(storage.all()[key], attr_name, attr_value)
         storage.all()[key].save()
