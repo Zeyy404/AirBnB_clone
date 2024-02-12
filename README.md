@@ -10,7 +10,9 @@ Welcome to the AirBnB clone project! This project is the first step toward build
 
 To start the command interpreter, run the following command:
 
-```$ ./console.py```
+```
+$ ./console.py
+```
 
 
 ### How to Use ###
