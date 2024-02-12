@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Unit test for BaseModel class"""
 import unittest
-import models
 import datetime
 from io import StringIO
 import sys
+sys.path.append('../../')
 from models.base_model import BaseModel
 
 
