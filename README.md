@@ -8,8 +8,11 @@ Welcome to the AirBnB clone project! This project is the first step toward build
 
 ### How to Start ###
 
-To start the command interpreter, run the following command:\n
+To start the command interpreter, run the following command:
+
 `$ ./console.py`
+
+---
 
 ### How to Use ###
 
@@ -21,23 +24,42 @@ Once the command interpreter is running, you can use the following commands:
 * **update**: Update attributes of an object.
 * **quit**: Exit the command interpreter.
 
+---
+
 ### Examples ###
 
 Interactive Mode
+
 `$ ./console.py
+
 (hbnb) create User
+
 0763d362-8c74-4f7f-9b65-3ea1f49ac9e1
+
 (hbnb) show User 0763d362-8c74-4f7f-9b65-3ea1f49ac9e1
+
 [User] (0763d362-8c74-4f7f-9b65-3ea1f49ac9e1) {'id': '0763d362-8c74-4f7f-9b65-3ea1f49ac9e1', 'created_at': '2024-02-13T12:00:00', 'updated_at': '2024-02-13T12:00:00'}
+
 (hbnb) all
+
 ["[User] (0763d362-8c74-4f7f-9b65-3ea1f49ac9e1) {'id': '0763d362-8c74-4f7f-9b65-3ea1f49ac9e1', 'created_at': '2024-02-13T12:00:00', 'updated_at': '2024-02-13T12:00:00'}"]
+
 (hbnb) quit
+
 $`
+
 Non-Interactive Mode
+
 `$ echo "create User" | ./console.py
+
 0763d362-8c74-4f7f-9b65-3ea1f49ac9e1
+
 $ echo "show User 0763d362-8c74-4f7f-9b65-3ea1f49ac9e1" | ./console.py
+
 [User] (0763d362-8c74-4f7f-9b65-3ea1f49ac9e1) {'id': '0763d362-8c74-4f7f-9b65-3ea1f49ac9e1', 'created_at': '2024-02-13T12:00:00', 'updated_at': '2024-02-13T12:00:00'}
+
 $ echo "all" | ./console.py
+
 ["[User] (0763d362-8c74-4f7f-9b65-3ea1f49ac9e1) {'id': '0763d362-8c74-4f7f-9b65-3ea1f49ac9e1', 'created_at': '2024-02-13T12:00:00', 'updated_at': '2024-02-13T12:00:00'}"]
+
 $`
