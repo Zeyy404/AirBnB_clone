@@ -12,7 +12,6 @@ To start the command interpreter, run the following command:
 
 `$ ./console.py`
 
----
 
 ### How to Use ###
 
@@ -24,13 +23,13 @@ Once the command interpreter is running, you can use the following commands:
 * **update**: Update attributes of an object.
 * **quit**: Exit the command interpreter.
 
----
 
 ### Examples ###
 
 Interactive Mode
 
-```$ ./console.py
+```
+$ ./console.py
 
 (hbnb) create User
 
@@ -51,7 +50,8 @@ $
 
 Non-Interactive Mode
 
-```$ echo "create User" | ./console.py
+```
+$ echo "create User" | ./console.py
 
 0763d362-8c74-4f7f-9b65-3ea1f49ac9e1
 
