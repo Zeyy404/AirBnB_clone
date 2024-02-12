@@ -3,7 +3,8 @@
 import unittest
 import os
 import json
-import models
+import sys
+sys.path.append('../../')
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 
